@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="test">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+
+	<resultMap id="test" class="com.test.vo.testVo">
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+		<result property="phone" column="pnum"/>
+		<result property="address" column="address"/>
+	</resultMap>
+    
+    <select id="testDao.selectAll" resultMap="test">
+        <![CDATA[
+            SELECT
+                ID, NAME, PNUM, ADDRESS
+            FROM USERS ORDER BY ID
+            ]]>
+    </select>
+</sqlMap>
