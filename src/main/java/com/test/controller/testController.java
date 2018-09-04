@@ -28,5 +28,12 @@ public class testController {
 		
 		return "hello";
 	}
+	
+	@RequestMapping(value="nextpage.do")
+	public String nextPage()throws Exception{
+		System.out.println("nextPage()");
+		
+		return "nextpage";
+	}
 
 }

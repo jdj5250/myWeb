@@ -25,5 +25,7 @@
 			<td align="center" class="listtd">	<c:out value="${result.address}" />&nbsp;</td>
 		</tr><br>
 	</c:forEach>
+	
+	<button onclick="location='nextpage.do'">다음 페이지</button>
 </body>
 </html>
