@@ -19,4 +19,11 @@
             FROM USERS ORDER BY ID
             ]]>
     </select>
+    
+    <insert id="testDao.insertUser" resultMap="test">
+    	<![CDATA[
+    		INSERT INTO USERS VALUES(
+    			#id#, #name#, #pnum#, #address#)    			
+    	]]>
+    </insert>
 </sqlMap>

@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.test.dao.testDao;
+import com.test.vo.testVo;
+
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
 @Service("testService")
@@ -26,6 +28,12 @@ public class testServiceImpl extends EgovAbstractServiceImpl implements testServ
 	public List<?> selectAll() throws Exception {
 		// TODO Auto-generated method stub
 		return testDao.selectAll();
+	}
+
+	@Override
+	public void insertUser(testVo vo) throws Exception {
+		// TODO Auto-generated method stub
+		testDao.insertUser(vo);
 	}
 
 }
